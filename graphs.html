@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Graphs{% endblock %}
+
+{% block content %}
+<h2>Graphs and Model Accuracy</h2>
+
+<section>
+    <h3>Random Forest Results</h3>
+    <p><strong>Accuracy:</strong> {{ rf_accuracy }}%</p>
+    <img src="{{ rf_cm_url }}" alt="Random Forest Confusion Matrix">
+    <img src="{{ rf_bar_url }}" alt="Random Forest Feature Importance">
+</section>
+
+<section>
+    <h3>XGBoost Results</h3>
+    <p><strong>Accuracy:</strong> {{ xgb_accuracy }}%</p>
+    <img src="{{ xgb_cm_url }}" alt="XGBoost Confusion Matrix">
+    <img src="{{ xgb_bar_url }}" alt="XGBoost Feature Importance">
+</section>
+{% endblock %}

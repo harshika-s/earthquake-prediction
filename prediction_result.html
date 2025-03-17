@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<main>
+    <h2>Prediction Result</h2>
+    <p><strong>Predicted Magnitude:</strong> {{ magnitude }}</p>
+    <p><strong>Predicted Intensity:</strong> {{ intensity }}</p>
+    <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+</main>
+{% endblock %}

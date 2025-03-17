@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Error{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <h2>Error</h2>
+    <p>{{ error }}</p>
+    <p>Please ensure that:</p>
+    <ul>
+        <li>You have run train_model.py to generate the model files</li>
+        <li>All model files (scaler.pkl, xgb_classifier.pkl, xgb_regressor.pkl, label_encoder.pkl) exist in the application directory</li>
+        <li>The model files are not corrupted</li>
+    </ul>
+    <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+</div>
+{% endblock %}
